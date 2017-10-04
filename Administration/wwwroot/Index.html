@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html ng-app="vacationApp">
+<head>
+    <meta charset="utf-8" />
+    <title>Vacation Tracking</title>
+    <link href="css/layout.css" rel="stylesheet" />
+    <link href="lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="lib/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet" />
+   
+    <script src="lib/jquery/dist/jquery.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
+
+    <script src="app/app.module.js"></script>
+    <script src="app/app.config.js"></script>
+
+    <script src="app/employees/employee-list/employee-list.module.js"></script>
+    <script src="app/employees/employee-list/employee-list.component.js"></script>
+
+    <script src="app/team-management/team-management.module.js"></script>
+    <script src="app/team-management/team-management.component.js"></script>
+
+    <script src="app/vacation/vacation.module.js"></script>
+    <script src="app/vacation/vacation.component.js"></script>
+
+    <script src="app/report/report.module.js"></script>
+    <script src="app/report/report.component.js"></script>
+
+    <script src="app/employees/employee-detail/employee-detail.module.js"></script>
+    <script src="app/employees/employee-detail/employee-detail.component.js"></script>
+
+    <script src="app/employees/employee-edit/employee-edit.module.js"></script>
+    <script src="app/employees/employee-edit/employee-edit.component.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div>
+            <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/"><b>Vacation Tracking</b></a>
+                    </div>
+                    <div class="collapse navbar-collapse " id="myNavbar">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#"><span class="glyphicon glyphicon-envelope"></span></a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-globe"></span></a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Mail@gmail.com</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Log out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="paddingtop">
+            <div class="row">
+                <!--sidebar-->
+                <div class="col-sm-3 col-md-2 sidebar">
+                    <div>
+                        <div class="heightbar">
+                            <ul class="nav nav-sidebar">
+                                <li class="widthbar">
+                                    <a ng-href="#/employees/detail" class="textcolor"><i class="glyphicon glyphicon-user"></i><b> Unknown Info</b></a>
+                                </li>
+                                <li class="widthbar">
+                                    <a ng-href="#/employees" class="textcolor"><i class ="glyphicon glyphicon-th-list"></i><b> Employee Management</b></a>
+                                </li>
+                                <li class="widthbar">
+                                    <a ng-href="#/teams" class="textcolor"> <i class="glyphicon glyphicon-grain"></i><b> Team Management</b></a>
+                                </li>
+                                <li class="widthbar">
+                                    <a ng-href="#/vacation" class="textcolor"><i class="glyphicon glyphicon-calendar"></i><b> Vacation Booking</b></a>
+                                </li>
+                                <li class="widthbar">
+                                    <a ng-href="#/report" class="textcolor"><i class="glyphicon glyphicon-file"></i><b> Report</b></a>
+                                </li>
+                            </ul>  
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-9 col-md-10  main">
+                    <div ng-view></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

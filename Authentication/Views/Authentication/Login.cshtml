@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid bgpage" ng-app="login">
+    <div class="modal-dialog loginpos" ng-controller="loginController">
+        <div class="loginmodal-container"  >
+            <h1>Login to Your Account</h1><br>
+            <form  action="/" method ="post" id="submitForm" name="submitForm" ng-submit="onSubmit(submitForm.$valid)">
+                <div class="form-group" ng-messages="(submitForm.email.$dirty||submitForm && submitForm.email.$error.required">
+                    <input type="text" name="email" placeholder="Email" autofocus >
+                    <span ng-message="required" class="help-block">Vui lòng nhập email!</span>
+                </div>
+                <div class="form-group" ng-messages="submitForm.password.$dirty && submitForm.password.$error.required ">                
+                    <input type="password" name="password" placeholder="Password" >
+                    <span ng-message="required" class="help-block">Vui lòng nhập password!</span>                                 
+                </div>
+                <div>
+                    <input type="submit" name="Login" class="login loginmodal-submit" value="Login">   
+                </div>               
+            </form>
+            <div class="login-help">
+                <a href="#">Forgot Password</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/js/Login/login.js"></script>
+}

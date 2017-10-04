@@ -1,0 +1,76 @@
+﻿<div ng-app="employeeDetail" ng-controller="profileCtrl">
+    <div class="container-fluid">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-0 toppad">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{selectedOption.firstName}} {{selectedOption.lastName}}</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3" align="center">
+                            <div>
+                                <img alt="User_Pic" src="/image/me-flat.jpg" class="img-responsive">
+                                <hr />
+                                <label>Upload a different photo</label>
+                                 <input type="file"/>
+                            </div>
+                        </div>
+                        <div class="col-sm-9 col-md-9 col-lg-9 ">
+                            <form>
+                                <table class="table table-user-information">
+                                    <tbody>
+                                        <tr>
+                                            <th>ID: </th>
+                                            <td>
+                                                <select id="idEmployee" name="idEmployee" data-ng-options="option.id for option in data.availableOptions" data-ng-model="selectedOption"></select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>First Name:</th>
+                                            <td><input id="firstname" name="firstname" value="{{selectedOption.firstName}}"/></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Last Name:</th>
+                                            <td><input id="lastname" name="lastname" value="{{selectedOption.lastName}}"/></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Date of Birth:</th>
+                                            <td><input id="lastname" name="lastname" value="{{selectedOption.dob}}" /></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Gender:</th>
+                                            <td><input id="lastname" name="lastname" value="{{selectedOption.gender}}" /></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Phone Number:</th>
+                                            <td><input id="lastname" name="lastname" value="{{selectedOption.phoneNumber}}" /></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Email:</th>
+                                            <td><input id="lastname" name="lastname" value="{{selectedOption.email}}" /></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Position:</th>
+                                            <td><input id="lastname" name="lastname" value="{{selectedOption.position}}" /></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Remaining Day Off:</th>
+                                            <td><input id="lastname" name="lastname" value="{{selectedOption.dayoff}}" /></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer">    
+                <button data-original-title="Broadcast Message" data-toggle="tooltip" type="button" class="btn btn-sm btn-info" disabled><i class="glyphicon glyphicon-envelope disable"></i></button>
+                <div class="pull-right">                
+                    <a ng-href="" data-original-title="Edit this user" data-toggle="tooltip"  class="btn btn-sm btn-success"><i class="glyphicon glyphicon-ok"></i> Save</a>
+                    <a data-original-title="Cancel" data-toggle="tooltip" ng-href="#/profile"  class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-remove"></i> Cancel</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
