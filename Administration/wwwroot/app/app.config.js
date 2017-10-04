@@ -22,6 +22,9 @@
                 when('/employees/edit', {
                     template:'<employee-edit></employee-edit>'
                 }).
+                when('/employees/new', {
+                    template:'<employee-new></employee-new>'
+                }).
                 otherwise('/null');
         }
     ]);

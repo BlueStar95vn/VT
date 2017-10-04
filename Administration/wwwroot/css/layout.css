@@ -1,8 +1,5 @@
-﻿ 
-
-.widthbar{
-    width:100%;
-    
+﻿ .widthbar{
+    width:100%;    
 }
 
 .heightbar {
@@ -16,6 +13,23 @@
 .disabled {
     pointer-events: none;
     cursor: default;
+}
+.registerbg{
+    background-color:#f8f7f7;
+}
+.iconbg{
+    background-color:#d0e8ca
+}
+.iconpadding{
+    padding-top:40px;
+}
+.num {
+    color: #fff;
+}
+.num .badge {
+    color: #fff;
+    background-color: #d9534f;
+    margin-right:10px;
 }
 body {
     padding-top: 50px;

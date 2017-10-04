@@ -3,12 +3,17 @@
 <head>
     <meta charset="utf-8" />
     <title>Vacation Tracking</title>
+
+    
     <link href="css/layout.css" rel="stylesheet" />
+    <link href="css/notification.css" rel="stylesheet" />
     <link href="lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
     <link href="lib/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet" />
-   
+    
+
     <script src="lib/jquery/dist/jquery.js"></script>
     <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="js/notification.js"></script>
 
     <script src="lib/angular/angular.js"></script>
     <script src="lib/angular-route/angular-route.js"></script>
@@ -33,6 +38,9 @@
 
     <script src="app/employees/employee-edit/employee-edit.module.js"></script>
     <script src="app/employees/employee-edit/employee-edit.component.js"></script>
+
+    <script src="app/employees/employee-new/employee-new.module.js"></script>
+    <script src="app/employees/employee-new/employee-new.component.js"></script>
 </head>
 <body>
     <div class="container-fluid">
@@ -49,10 +57,49 @@
                     </div>
                     <div class="collapse navbar-collapse " id="myNavbar">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#"><span class="glyphicon glyphicon-envelope"></span></a></li>
-                            <li><a href="#"><span class="glyphicon glyphicon-globe"></span></a></li>
-                            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Mail@gmail.com</a></li>
-                            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Log out</a></li>
+                            <!--<li ><a href="" class="dropdown-toggle " data-toggle="dropdown" >
+                                     <span>    
+                                         <span class="glyphicon glyphicon-envelope "></span>
+                                         <span class="num">
+                                             <span class="badge">1</span>
+                                         </span>                                         
+                                     </span>                                    
+                                 </a>
+                            </li>-->
+                            <li id="messsage_li">
+                                <span id="message_count">3</span>
+                                <a href="#" id="messageLink"><span class="glyphicon glyphicon-envelope "></span></a>
+
+                                <div id="messageContainer">
+                                    <div id="messageTitle">Messages</div>
+                                    <div id="messageBody" class="notifications"></div>
+                                    <div id="messageFooter"><a href="#">See All</a></div>
+                                </div>
+
+                            </li>
+                            <!--<li><a href="" class="dropdown-toggle">
+                                    <span>
+                                        <span class="glyphicon glyphicon-globe"></span>
+                                        <span class="num">
+                                            <span class="badge">1</span>
+                                        </span>
+                                    </span>
+                                
+                                </a>
+                            </li>-->
+                            <li id="notification_li">
+                                <span id="notification_count">4</span>
+                                <a href="#" id="notificationLink"><span class="glyphicon glyphicon-globe"></span></a>
+
+                                <div id="notificationContainer">
+                                    <div id="notificationTitle">Notifications</div>
+                                    <div id="notificationsBody" class="notifications"></div>
+                                    <div id="notificationFooter"><a href="#">See All</a></div>
+                                </div>
+
+                            </li>
+                            <li><a href="" ><span class="glyphicon glyphicon-user"></span> Mail@gmail.com</a></li>
+                            <li><a href=""><span class="glyphicon glyphicon-log-in"></span> Log out</a></li>
                         </ul>
                     </div>
                 </div>

@@ -2,10 +2,9 @@
 <div ng-app="employeeDetail" ng-controller="profileCtrl">
     <div class="container-fluid">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-0 toppad">
-
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                    <h3 class="panel-title">{{selectedOption.firstName}} {{selectedOption.lastName}}</h3>
+            <div class="panel panel-success">
+                <div class="panel panel-heading">
+                    <h3 class="panel-title"><b>{{selectedOption.firstName}} {{selectedOption.lastName}}</b></h3>
                 </div>
                 <div class="panel-body">
                     <div class="row">
@@ -16,7 +15,7 @@
                         </div>
                         <div class="col-sm-9 col-md-9 col-lg-9 ">
                             <form>
-                                <table class="table table-user-information">
+                                <table class="table table-hover">
                                     <tbody>
                                         <tr>
                                             <th>ID: </th>
@@ -26,15 +25,15 @@
                                         </tr>
                                         <tr>
                                             <th>First Name:</th>
-                                            <td><label id="firstname" name="firstname">{{selectedOption.firstName}}</label></td>
+                                            <td><label id="firstName" name="firstName">{{selectedOption.firstName}}</label></td>
                                         </tr>
                                         <tr>
                                             <th>Last Name:</th>
-                                            <td><label id="lastname" name="lastname">{{selectedOption.lastName}}</label></td>
+                                            <td><label id="lastName" name="lastName">{{selectedOption.lastName}}</label></td>
                                         </tr>
                                         <tr>
                                             <th>Date of Birth:</th>
-                                            <td><label id="dob" name="dob"></label>{{selectedOption.dob}}</td>
+                                            <td><label id="dOB" name="dOB"></label>{{selectedOption.dob}}</td>
                                         </tr>
                                         <tr>
                                             <th>Gender:</th>
@@ -54,7 +53,7 @@
                                         </tr>
                                         <tr>
                                             <th>Remaining Day Off:</th>
-                                            <td><label id="dayoff" name="dayoff"></label>{{selectedOption.dayoff}}</td>
+                                            <td><label id="rDO" name="rDO"></label>{{selectedOption.dayoff}}</td>
                                         </tr>
                                     </tbody>
                                 </table>
