@@ -1,1 +1,1 @@
-﻿
+﻿angular.module('teamDetail', ['ngRoute']);

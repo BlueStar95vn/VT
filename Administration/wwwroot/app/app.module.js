@@ -1,8 +1,6 @@
 ﻿angular.module('vacationApp', ['ngRoute',
-    'employeeList',
-    'teamManagement',
+    'employeeList', 'employeeDetail', 'employeeEdit', 'employeeAdd',
+    'teamList', 'teamDetail', 'teamEdit','teamAdd',
     'vacation',
-    'report',
-    'employeeDetail',
-    'employeeEdit',
-    'employeeNew']);
+    'report'
+    ]);

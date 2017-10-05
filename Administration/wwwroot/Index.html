@@ -3,35 +3,26 @@
 <head>
     <meta charset="utf-8" />
     <title>Vacation Tracking</title>
-
-    
+    <!--CSS-->
     <link href="css/layout.css" rel="stylesheet" />
     <link href="css/notification.css" rel="stylesheet" />
     <link href="lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
     <link href="lib/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet" />
-    
 
+    <!--JS-->
     <script src="lib/jquery/dist/jquery.js"></script>
     <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
     <script src="js/notification.js"></script>
 
     <script src="lib/angular/angular.js"></script>
     <script src="lib/angular-route/angular-route.js"></script>
-
+   
     <script src="app/app.module.js"></script>
     <script src="app/app.config.js"></script>
 
+    <!--Employees-->
     <script src="app/employees/employee-list/employee-list.module.js"></script>
     <script src="app/employees/employee-list/employee-list.component.js"></script>
-
-    <script src="app/team-management/team-management.module.js"></script>
-    <script src="app/team-management/team-management.component.js"></script>
-
-    <script src="app/vacation/vacation.module.js"></script>
-    <script src="app/vacation/vacation.component.js"></script>
-
-    <script src="app/report/report.module.js"></script>
-    <script src="app/report/report.component.js"></script>
 
     <script src="app/employees/employee-detail/employee-detail.module.js"></script>
     <script src="app/employees/employee-detail/employee-detail.component.js"></script>
@@ -39,8 +30,28 @@
     <script src="app/employees/employee-edit/employee-edit.module.js"></script>
     <script src="app/employees/employee-edit/employee-edit.component.js"></script>
 
-    <script src="app/employees/employee-new/employee-new.module.js"></script>
-    <script src="app/employees/employee-new/employee-new.component.js"></script>
+    <script src="app/employees/employee-add/employee-add.module.js"></script>
+    <script src="app/employees/employee-add/employee-add.component.js"></script>
+
+    <!--Teams-->
+    <script src="app/teams/team-list/team-list.module.js"></script>
+    <script src="app/teams/team-list/team-list.component.js"></script>
+
+    <script src="app/teams/team-edit/team-edit.module.js"></script>
+    <script src="app/teams/team-edit/team-edit.component.js"></script>
+
+    <script src="app/teams/team-detail/team-detail.module.js"></script>
+    <script src="app/teams/team-detail/team-detail.component.js"></script>
+
+    <script src="app/teams/team-add/team-add.module.js"></script>
+    <script src="app/teams/team-add/team-add.component.js"></script>
+    <!--Vacation-->
+    <script src="app/vacation/vacation.module.js"></script>
+    <script src="app/vacation/vacation.component.js"></script>
+
+    <!--Report-->
+    <script src="app/report/report.module.js"></script>
+    <script src="app/report/report.component.js"></script>
 </head>
 <body>
     <div class="container-fluid">
@@ -53,19 +64,10 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="/"><b>Vacation Tracking</b></a>
+                        <a class="navbar-brand" href=""><b>Home</b></a>
                     </div>
                     <div class="collapse navbar-collapse " id="myNavbar">
                         <ul class="nav navbar-nav navbar-right">
-                            <!--<li ><a href="" class="dropdown-toggle " data-toggle="dropdown" >
-                                     <span>    
-                                         <span class="glyphicon glyphicon-envelope "></span>
-                                         <span class="num">
-                                             <span class="badge">1</span>
-                                         </span>                                         
-                                     </span>                                    
-                                 </a>
-                            </li>-->
                             <li id="messsage_li">
                                 <span id="message_count">3</span>
                                 <a href="#" id="messageLink"><span class="glyphicon glyphicon-envelope "></span></a>
@@ -75,30 +77,18 @@
                                     <div id="messageBody" class="notifications"></div>
                                     <div id="messageFooter"><a href="#">See All</a></div>
                                 </div>
-
                             </li>
-                            <!--<li><a href="" class="dropdown-toggle">
-                                    <span>
-                                        <span class="glyphicon glyphicon-globe"></span>
-                                        <span class="num">
-                                            <span class="badge">1</span>
-                                        </span>
-                                    </span>
-                                
-                                </a>
-                            </li>-->
                             <li id="notification_li">
                                 <span id="notification_count">4</span>
                                 <a href="#" id="notificationLink"><span class="glyphicon glyphicon-globe"></span></a>
 
                                 <div id="notificationContainer">
                                     <div id="notificationTitle">Notifications</div>
-                                    <div id="notificationsBody" class="notifications"></div>
+                                    <div id="notificationBody" class="notifications"></div>
                                     <div id="notificationFooter"><a href="#">See All</a></div>
                                 </div>
-
                             </li>
-                            <li><a href="" ><span class="glyphicon glyphicon-user"></span> Mail@gmail.com</a></li>
+                            <li><a ng-href="#/employees/detail"><span class="glyphicon glyphicon-user"></span> Mail@gmail.com</a></li>
                             <li><a href=""><span class="glyphicon glyphicon-log-in"></span> Log out</a></li>
                         </ul>
                     </div>
@@ -113,10 +103,10 @@
                         <div class="heightbar">
                             <ul class="nav nav-sidebar">
                                 <li class="widthbar">
-                                    <a ng-href="#/employees/detail" class="textcolor"><i class="glyphicon glyphicon-user"></i><b> Unknown Info</b></a>
+                                    <a ng-href="#/employees/detail" class="textcolor"><i class="glyphicon glyphicon-user"></i><b> Profile</b></a>
                                 </li>
                                 <li class="widthbar">
-                                    <a ng-href="#/employees" class="textcolor"><i class ="glyphicon glyphicon-th-list"></i><b> Employee Management</b></a>
+                                    <a ng-href="#/employees" class="textcolor"><i class="glyphicon glyphicon-th-list"></i><b> Employee Management</b></a>
                                 </li>
                                 <li class="widthbar">
                                     <a ng-href="#/teams" class="textcolor"> <i class="glyphicon glyphicon-grain"></i><b> Team Management</b></a>
@@ -127,7 +117,7 @@
                                 <li class="widthbar">
                                     <a ng-href="#/report" class="textcolor"><i class="glyphicon glyphicon-file"></i><b> Report</b></a>
                                 </li>
-                            </ul>  
+                            </ul>
                         </div>
                     </div>
                 </div>

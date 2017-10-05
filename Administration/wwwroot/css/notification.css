@@ -1,5 +1,5 @@
 ﻿#message_li {
-    position: relative
+    position: relative;
 }
 
 #messageContainer {
@@ -11,7 +11,6 @@
     top: 40px;
     margin-left: -177px;
     width: 400px;
-
     z-index: -1;
     display: none;
     /*// Enable this after jquery implementation*/
@@ -70,7 +69,7 @@
 }
 
 #notification_li {
-    position: relative
+    position:relative;
 }
 
 #notificationContainer {
@@ -112,7 +111,7 @@
     border-bottom: 1px solid #dddddd;
 }
 
-#notificationsBody {
+#notificationBody {
     padding: 33px 0px 0px 0px !important;
     min-height: 300px;
 }
