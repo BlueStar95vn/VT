@@ -88,7 +88,8 @@
 
             start: '09:00', // a start time 
             end: '18:00', // an end time 
-        }
+        },
+        themeSystem:'jquery-ui'
        
        
     });

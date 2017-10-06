@@ -59,7 +59,8 @@
         eventColor: 'DeepSkyBlue3',
         eventRender: function eventRender(event, element, view) {
             return ['', event.employee].indexOf($('#employee').val()) >= 0;
-        }
+        },
+        themeSystem:'jquery-ui'
     });
     $('#filter').on('click', function () {
         $('#calendar').fullCalendar('rerenderEvents');
