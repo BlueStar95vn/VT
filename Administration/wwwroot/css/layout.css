@@ -3,7 +3,11 @@
 }
 
 .heightbar {
-    min-height: 700px;
+    height: 970px;
+}
+
+.fixsidebar {
+    position: fixed;
 }
 
 .textcolor {
