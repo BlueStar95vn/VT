@@ -4,6 +4,8 @@
   "dependencies": {
     "angular-route": "v1.6.6",
     "angular-mocks": "v1.6.6",
-    "bootstrap": "v3.3.7"
+    "bootstrap": "v3.3.7",
+    "fullcalendar": "v3.5.1",
+    "jquery-ui": "1.12.1"
   }
 }

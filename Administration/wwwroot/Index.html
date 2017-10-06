@@ -4,21 +4,32 @@
     <meta charset="utf-8" />
     <title>Vacation Tracking</title>
     <!--CSS-->
-    <link href="css/layout.css" rel="stylesheet" />
-    <link href="css/notification.css" rel="stylesheet" />
+
+    <link href="css/layout.css" rel="stylesheet" />   
     <link href="lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
     <link href="lib/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="css/notification.css" rel="stylesheet" />
 
-    <!--JS-->
+    <!--JS-->   
+
     <script src="lib/jquery/dist/jquery.js"></script>
+    <script src="lib/jquery-ui/jquery-ui.js"></script>
     <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="js/notification.js"></script>
 
     <script src="lib/angular/angular.js"></script>
     <script src="lib/angular-route/angular-route.js"></script>
-   
+
+    <!--Index-->
+
     <script src="app/app.module.js"></script>
     <script src="app/app.config.js"></script>
+    <script src="js/notification.js"></script>
+
+    <!--Vacation-->
+    <script src="app/vacation/vacation.module.js"></script>
+    <script src="app/vacation/vacation.component.js"></script>
+
+    
 
     <!--Employees-->
     <script src="app/employees/employee-list/employee-list.module.js"></script>
@@ -44,10 +55,7 @@
     <script src="app/teams/team-detail/team-detail.component.js"></script>
 
     <script src="app/teams/team-add/team-add.module.js"></script>
-    <script src="app/teams/team-add/team-add.component.js"></script>
-    <!--Vacation-->
-    <script src="app/vacation/vacation.module.js"></script>
-    <script src="app/vacation/vacation.component.js"></script>
+    <script src="app/teams/team-add/team-add.component.js"></script>   
 
     <!--Report-->
     <script src="app/report/report.module.js"></script>
@@ -64,7 +72,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href=""><b>Home</b></a>
+                        <a class="navbar-brand" ng-href="#"><b>Home</b></a>
                     </div>
                     <div class="collapse navbar-collapse " id="myNavbar">
                         <ul class="nav navbar-nav navbar-right">
