@@ -33,8 +33,7 @@
                 }).
                 when('/report', {
                     template: '<report></report>'
-                }).
-                
+                }).                
                 otherwise('/null');
         }
     ]);

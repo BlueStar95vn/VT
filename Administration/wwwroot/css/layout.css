@@ -27,18 +27,17 @@
 .iconpadding{
     padding-top:40px;
 }
-.num {
-    color: #fff;
-}
-.num .badge {
-    color: #fff;
-    background-color: #d9534f;
-    margin-right:10px;
-}
 body {
     padding-top: 50px;
 }
 
+.event-scoll{
+    height:250px;
+    overflow:scroll;
+}
+.event-calendar{
+    width:450px;
+}
 
 /*
  * Global add-ons

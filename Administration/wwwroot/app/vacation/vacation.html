@@ -1,25 +1,55 @@
-﻿<!DOCTYPE html>
+﻿<!--<!DOCTYPE html>
 <html>
-<head>
+<head ng-app="vacation">
     <meta charset="utf-8" />
     <link href="../../lib/jquery-ui/themes/redmond/jquery-ui.css" rel="stylesheet" />
     <link href="../../css/calendar.css" rel="stylesheet" />
+
+
     <link href="../../lib/fullcalendar/dist/fullcalendar.css" rel="stylesheet" />
     <script src="../../lib/jquery/dist/jquery.js"></script>
     <script src="../../lib/moment/moment.js"></script>
     <script src="../../lib/fullcalendar/dist/fullcalendar.js"></script>
-    <script src="../../js/calendar.js"></script>
-    
+    <script src="/app/vacation/calendar.js"></script>
+
+
 </head>
-<body>
+<body ng-controller="CalendarCtrl">
     <div class="calendarbody">
         <div id='calendar'></div>
     </div>
-
     <div class="panel-footer">
         <div>
             Remaining Day Off: ...
         </div>
     </div>
 </body>
-</html>
+</html>-->
+<div>
+    <div ui-calendar="$ctrl.uiConfig.calendar" ng-model="$ctrl.eventSources" calendar="myCalendar" class="calendar"></div>
+    <hr />
+    <div class="row">
+        <div class="col-lg-1 col-md-2 col-sm-2">
+            <button type="button" class="btn btn-primary" ng-click="$ctrl.addEvent()">
+                Add Event
+            </button>
+            {{$ctrl.events.length}}
+        </div>
+        <div class="col-lg-11 col-md-10 col-sm-10">
+            <div class="event-scoll">
+                <ul>
+                    <li ng-repeat="e in $ctrl.events" class="list-unstyled event-calendar">
+                        <div class="alert alert-info">
+                            <a class="close" ng-click="$ctrl.remove($index)"><i class="glyphicon glyphicon-remove"></i></a>
+                            <b> <input ng-model="e.title"></b>
+                            {{e.start | date:"MMM dd"}} - {{e.end | date:"MMM dd"}}
+                            <a class="close" ng-click="$ctrl.update()"><i class="glyphicon glyphicon-check">Update</i> </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+       
+</div>
+
